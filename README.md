@@ -1,1 +1,1 @@
-# hackaton-equipe-06
+# Hackathon E+ - Back End - Equipe 06
