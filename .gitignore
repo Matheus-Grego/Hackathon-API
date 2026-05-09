@@ -1,5 +1,81 @@
+## .NET / C# - Padrão Visual Studio
+
+# Build results
 bin/
 obj/
-/packages/
-riderModule.iml
-/_ReSharper.Caches/
+out/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Rider IDE
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+!**/packages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Logs
+*.log
+logs/
+
+# Publicação
+publish/
+**/publish/
+
+# dotnet tools
+.config/dotnet-tools.json
+
+# User Secrets (nunca subir!)
+**/secrets.json
+**/appsettings.Development.json
+
+# Arquivos de ambiente
+.env
+.env.*
+
+# Certificados
+*.pfx
+*.p12
+
+# Cobertura de testes
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Arquivos temporários do Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Arquivos de crash
+*.dmp
