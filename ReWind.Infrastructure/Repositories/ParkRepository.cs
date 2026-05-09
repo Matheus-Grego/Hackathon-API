@@ -1,10 +1,11 @@
 using HackathonEquipe6.Core.Entities;
+using HackathonEquipe6.Core.Repositories;
 using HackathonEquipe6.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
 
 namespace HackathonEquipe6.Infrastructure.Repositories;
 
-public class ParkRepository
+public class ParkRepository : IParkRepository
 {
     private readonly ReWindDbContext _dbContext;
 
@@ -13,7 +14,7 @@ public class ParkRepository
         _dbContext = context;
     }
     
-    public async Task<List<Park>> GetAllCompanies()
+    public async Task<List<Park>> GetAllParks()
     {
         return await _dbContext.Park.ToListAsync();
     }

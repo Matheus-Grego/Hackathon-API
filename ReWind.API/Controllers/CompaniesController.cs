@@ -41,4 +41,10 @@ public class CompaniesController : ControllerBase
     {
         return NoContent();
     } 
+    
+    [HttpPost("Register")]
+    public async Task<IActionResult> Register(CompanyViewModel model)
+    {
+        return NoContent();
+    } 
 }

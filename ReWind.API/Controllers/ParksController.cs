@@ -1,4 +1,5 @@
 using HackathonEquipe6.Application.Models;
+using HackathonEquipe6.Core.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HackathonEquipe6.API.Controllers;
@@ -7,10 +8,17 @@ namespace HackathonEquipe6.API.Controllers;
 [Route("api/parks")]
 public class ParksController : ControllerBase
 {
+
+    private readonly IParkRepository _repository;
+    public ParksController(IParkRepository repository)
+    {
+        _repository = repository;
+    }
     [HttpGet]
     public async Task<IActionResult> GetAllParks()
     {
-        return NoContent();
+        var result = await _repository.GetAllParks();
+        return Ok(result);
     }
     
     [HttpGet("{id}")]

@@ -14,7 +14,7 @@ public class CompanyRepository
     }
     public async Task<List<Company>> GetAllCompanies()
     {
-       return await _dbContext.Company.ToListAsync();
+       return await _dbContext.Company.Where(x => !x.IsDeleted).ToListAsync();
     }
     public async Task<Company?> GetCompanyById(Guid id)
     {
