@@ -19,7 +19,7 @@ public class ParksController : ControllerBase
         return NoContent();
     }
     
-    [HttpGet("{id}")]
+    [HttpGet("details/{id}")]
     public async Task<IActionResult> GetParkDetails(Guid id)
     {
         return NoContent();

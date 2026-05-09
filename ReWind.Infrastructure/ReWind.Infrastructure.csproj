@@ -8,12 +8,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Persistance\" />
+      <ProjectReference Include="..\ReWind.Application\ReWind.Application.csproj" />
+      <ProjectReference Include="..\Rewind.Core\Rewind.Core.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ReWind.Application\ReWind.Application.csproj" />
-      <ProjectReference Include="..\Rewind.Core\Rewind.Core.csproj" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.7" />
     </ItemGroup>
 
 </Project>

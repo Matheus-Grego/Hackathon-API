@@ -24,7 +24,7 @@ public class CompaniesController : ControllerBase
         return NoContent();
     }
     
-    [HttpGet("{id}")]
+    [HttpGet("details/{id}")]
     public async Task<IActionResult> GetCompanyDetails(Guid id)
     {
         return NoContent();
