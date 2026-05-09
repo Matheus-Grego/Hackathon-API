@@ -19,8 +19,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ReWindDbContext>(options =>
     options.UseNpgsql(connectionString));
 
-
 builder.Services.AddScoped<IParkRepository, ParkRepository>();
+builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 
 var app = builder.Build();
 

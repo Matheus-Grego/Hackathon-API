@@ -16,15 +16,15 @@ public class ParkRepository : IParkRepository
     
     public async Task<List<Park>> GetAllParks()
     {
-        return await _dbContext.Park.ToListAsync();
+        return await _dbContext.Parks.ToListAsync();
     }
     public async Task<Park?> GetCompanyById(Guid id)
     {
-        return await _dbContext.Park.AsNoTracking().SingleOrDefaultAsync(x => x.Id == id);
+        return await _dbContext.Parks.AsNoTracking().SingleOrDefaultAsync(x => x.Id == id);
     }
     public async Task<Park?> GetCompanyDetails(Guid id)
     {
-        return await _dbContext.Park
+        return await _dbContext.Parks
             .Include(x => x.ParkWaste)
             .ThenInclude(x => x.Waste)
             .SingleOrDefaultAsync(x => x.Id == id);

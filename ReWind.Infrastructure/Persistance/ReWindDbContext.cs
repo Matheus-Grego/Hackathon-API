@@ -5,20 +5,18 @@ namespace HackathonEquipe6.Infrastructure.Persistance;
 
 public class ReWindDbContext : DbContext
 {
-    public readonly DbContextOptions<ReWindDbContext> _dbContextOptions;
     public ReWindDbContext(DbContextOptions <ReWindDbContext> options) : base(options)
     {
         
     }
-    
-    public DbSet<Company> Company { get; set; }
-    public DbSet<Park> Park { get; set; }
-    public DbSet<ParkWaste>  ParkWaste { get; set; }
-    public DbSet<Waste>  Waste { get; set; }
-    public DbSet<CompanyWaste> CompanyWaste { get; set; }
-    public DbSet<CompanySegment> CompanySegment { get; set; }
-    
-    
+    public DbSet<Company> Companies { get; set; }
+    public DbSet<Park> Parks { get; set; }
+    public DbSet<ParkWaste> ParkWastes { get; set; }
+    public DbSet<Waste> Wastes { get; set; }
+    public DbSet<CompanyWaste> CompanyWastes { get; set; }
+    public DbSet<CompanySegment> CompanySegments { get; set; }
+
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.Entity<Company>(e =>
