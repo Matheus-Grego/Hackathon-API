@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackathonEquipe6.API", "HackathonEquipe6.API\HackathonEquipe6.API.csproj", "{6C134171-9F15-4A13-8BBC-D80C20F4D4D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackathonEquipe6.Application", "HackathonEquipe6.Application\HackathonEquipe6.Application.csproj", "{164FCC0E-29B1-4D63-B33D-21EECD16872C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackathonEquipe6.Core", "HackathonEquipe6.Core\HackathonEquipe6.Core.csproj", "{35F4FCBF-720B-4C65-836C-84DC4D88A69F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackathonEquipe6.Infrastructure", "HackathonEquipe6.Infrastructure\HackathonEquipe6.Infrastructure.csproj", "{0CE6186D-67DB-4521-A024-465512692FEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C134171-9F15-4A13-8BBC-D80C20F4D4D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C134171-9F15-4A13-8BBC-D80C20F4D4D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C134171-9F15-4A13-8BBC-D80C20F4D4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C134171-9F15-4A13-8BBC-D80C20F4D4D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{164FCC0E-29B1-4D63-B33D-21EECD16872C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164FCC0E-29B1-4D63-B33D-21EECD16872C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164FCC0E-29B1-4D63-B33D-21EECD16872C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164FCC0E-29B1-4D63-B33D-21EECD16872C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35F4FCBF-720B-4C65-836C-84DC4D88A69F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F4FCBF-720B-4C65-836C-84DC4D88A69F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F4FCBF-720B-4C65-836C-84DC4D88A69F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F4FCBF-720B-4C65-836C-84DC4D88A69F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CE6186D-67DB-4521-A024-465512692FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE6186D-67DB-4521-A024-465512692FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE6186D-67DB-4521-A024-465512692FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE6186D-67DB-4521-A024-465512692FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
