@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackathonEquipe6.API", "HackathonEquipe6.API\HackathonEquipe6.API.csproj", "{6C134171-9F15-4A13-8BBC-D80C20F4D4D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReWind.API", "ReWind.API\ReWind.API.csproj", "{6C134171-9F15-4A13-8BBC-D80C20F4D4D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackathonEquipe6.Application", "HackathonEquipe6.Application\HackathonEquipe6.Application.csproj", "{164FCC0E-29B1-4D63-B33D-21EECD16872C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReWind.Application", "ReWind.Application\ReWind.Application.csproj", "{164FCC0E-29B1-4D63-B33D-21EECD16872C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackathonEquipe6.Core", "HackathonEquipe6.Core\HackathonEquipe6.Core.csproj", "{35F4FCBF-720B-4C65-836C-84DC4D88A69F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rewind.Core", "Rewind.Core\Rewind.Core.csproj", "{35F4FCBF-720B-4C65-836C-84DC4D88A69F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackathonEquipe6.Infrastructure", "HackathonEquipe6.Infrastructure\HackathonEquipe6.Infrastructure.csproj", "{0CE6186D-67DB-4521-A024-465512692FEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReWind.Infrastructure", "ReWind.Infrastructure\ReWind.Infrastructure.csproj", "{0CE6186D-67DB-4521-A024-465512692FEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
