@@ -1,6 +1,6 @@
 namespace HackathonEquipe6.Core.Entities;
 
-public class CompanyWaste
+public class CompanyWaste : BaseEntity
 {
     public Guid CompanyId { get; set; }
     public Guid WasteId { get; set; }

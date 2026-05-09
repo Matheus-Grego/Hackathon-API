@@ -29,10 +29,13 @@ public class ReWindDbContext : DbContext
                 .WithOne(us => us.Company)
                 .HasForeignKey(us => us.CompanyId)
                 .OnDelete(DeleteBehavior.Restrict);
-            
+
+            e.HasMany(u => u.CompanySegments)
+                .WithOne(s => s.Company)
+                .HasForeignKey(us => us.CompanyId)
+                .OnDelete(DeleteBehavior.Restrict);
+
         });
-        
-        
         builder.Entity<Park>(e =>
         {
             e.HasKey(u => u.Id);
@@ -42,6 +45,25 @@ public class ReWindDbContext : DbContext
                 .HasForeignKey(us => us.ParkId)
                 .OnDelete(DeleteBehavior.Restrict);
         });
+        builder.Entity<ParkWaste>(e =>
+        {
+            e.HasKey(u => u.Id);
+        });
+        builder.Entity<Waste>(e =>
+        {
+            e.HasKey(u => u.Id);
+        });
+        
+        builder.Entity<CompanyWaste>(e =>
+        {
+            e.HasKey(u => u.Id);
+        });
+        
+        builder.Entity<CompanySegment>(e =>
+        {
+            e.HasKey(u => u.Id);
+        });
+        
         
         base.OnModelCreating(builder);
     }

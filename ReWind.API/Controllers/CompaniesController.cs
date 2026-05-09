@@ -30,8 +30,14 @@ public class CompaniesController : ControllerBase
         return NoContent();
     }
     
-    [HttpPost]
+    [HttpPost("login")]
     public async Task<IActionResult> login(LoginViewModel model)
+    {
+        return NoContent();
+    } 
+    
+    [HttpPost("RegisterWaste")]
+    public async Task<IActionResult> InsertWaste(WasteViewModel model)
     {
         return NoContent();
     } 
