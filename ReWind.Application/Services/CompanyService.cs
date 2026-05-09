@@ -11,28 +11,27 @@ public class CompanyService : ICompanyService
     private readonly ICompanyRepository _repository;
     private readonly IGoogleMapsService _mapsService;
 
-    public CompanyService(ICompanyRepository repository, IGoogleMapsService mapsService)
+    public CompanyService(ICompanyRepository repository)
     {
         _repository = repository;
-        _mapsService = mapsService;
     }
 
     public async Task<List<CompanyViewModel>> GetAllCompanies()
     {
         var entities = await _repository.GetAllCompanies();
-        return entities.Select(ToViewModel).ToList();
+        return entities.Select(x => CompanyViewModel.ToViewModel(x)).ToList();
     }
 
     public async Task<CompanyViewModel?> GetCompanyById(Guid id)
     {
         var entity = await _repository.GetCompanyById(id);
-        return entity == null ? null : ToViewModel(entity);
+        return entity == null ? null : CompanyViewModel.ToViewModel(entity);
     }
 
     public async Task<CompanyViewModel?> GetCompanyDetails(Guid id)
     {
         var entity = await _repository.GetCompanyDetails(id);
-        return entity == null ? null : ToViewModel(entity);
+        return entity == null ? null : CompanyViewModel.ToViewModel(entity);
     }
 
     public async Task CreateAsync(CompanyInputModel input)
@@ -56,19 +55,4 @@ public class CompanyService : ICompanyService
 
         await _repository.CreateAsync(entity);
     }
-
-    private CompanyViewModel ToViewModel(Company c) => new()
-    {
-        Id = c.Id,
-        Name = c.Name,
-        DocumentNumber = c.DocumentNumber,
-        Address = c.Address,
-        City = c.City,
-        State = c.State,
-        ZipCode = c.ZipCode,
-        Phone = c.Phone,
-        Email = c.Email,
-        Latitude = c.Latitude,
-        Longitude = c.Longitude
-    };
 }

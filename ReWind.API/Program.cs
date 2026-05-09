@@ -1,4 +1,5 @@
 using HackathonEquipe6.Application.Services;
+using HackathonEquipe6.Core.Entities;
 using HackathonEquipe6.Core.Repositories;
 using HackathonEquipe6.Infrastructure.GoogleMapsPersistent;
 using HackathonEquipe6.Infrastructure.Persistance;
@@ -23,8 +24,11 @@ builder.Services.AddDbContext<ReWindDbContext>(options =>
 
 builder.Services.AddScoped<IParkRepository, ParkRepository>();
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
+builder.Services.AddScoped<IWasteRepository, WasteRepository>();
+
 builder.Services.AddHttpClient<IGoogleMapsService, GoogleMapsService>();
 builder.Services.AddScoped<ICompanyService, CompanyService>();
+
 
 var app = builder.Build();
 

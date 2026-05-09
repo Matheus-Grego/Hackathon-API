@@ -1,4 +1,5 @@
 using HackathonEquipe6.Application.Models;
+using HackathonEquipe6.Application.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HackathonEquipe6.API.Controllers;
@@ -7,27 +8,31 @@ namespace HackathonEquipe6.API.Controllers;
 [Route("api/companies")]
 public class CompaniesController : ControllerBase
 {
-    public CompaniesController()
+    private readonly ICompanyService _service;
+    public CompaniesController(ICompanyService service)
     {
-        
+        _service = service;
     }
 
     [HttpGet]
     public async Task<IActionResult> GetAllCompanies()
     {
-        return NoContent();
+        var result = await _service.GetAllCompanies();
+        return Ok(result);
     }
     
     [HttpGet("{id}")]
     public async Task<IActionResult> GetCompanyById(Guid id)
     {
-        return NoContent();
+        var result = await _service.GetCompanyById(id);
+        return Ok(result);
     }
     
     [HttpGet("details/{id}")]
     public async Task<IActionResult> GetCompanyDetails(Guid id)
     {
-        return NoContent();
+        var result = await _service.GetCompanyDetails(id);
+        return Ok(result);
     }
     
     [HttpPost("login")]
