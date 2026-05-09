@@ -18,11 +18,11 @@ public class ParkRepository : IParkRepository
     {
         return await _dbContext.Parks.ToListAsync();
     }
-    public async Task<Park?> GetCompanyById(Guid id)
+    public async Task<Park?> GetParkById(Guid id)
     {
         return await _dbContext.Parks.AsNoTracking().SingleOrDefaultAsync(x => x.Id == id);
     }
-    public async Task<Park?> GetCompanyDetails(Guid id)
+    public async Task<Park?> GetParkDetails(Guid id)
     {
         return await _dbContext.Parks
             .Include(x => x.ParkWaste)
