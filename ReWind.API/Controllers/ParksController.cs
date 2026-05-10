@@ -33,7 +33,8 @@ public class ParksController : ControllerBase
     [HttpGet("details/{id}")]
     public async Task<IActionResult> GetParkDetails(Guid id)
     {
-        return NoContent();
+        var result = await _service.GetParkDetails(id);
+        return Ok(result);
     }
     
     [HttpPost]

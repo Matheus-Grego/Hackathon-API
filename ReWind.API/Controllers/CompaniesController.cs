@@ -42,7 +42,7 @@ public class CompaniesController : ControllerBase
     } 
     
     [HttpPost("RegisterWaste")]
-    public async Task<IActionResult> InsertWaste(WasteViewModel model)
+    public async Task<IActionResult> InsertWaste(CompanyWasteViewModel model)
     {
         return NoContent();
     } 

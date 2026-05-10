@@ -8,5 +8,5 @@ public interface IParkService
 
     Task<ParkViewModel?> GetParkById(Guid id);
 
-    Task<ParkViewModel?> GetParkDetails(Guid id);
+    Task<ParkDetailsViewModel?> GetParkDetails(Guid id);
 }

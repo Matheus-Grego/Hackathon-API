@@ -5,4 +5,5 @@ namespace HackathonEquipe6.Application.Services;
 public interface IWasteService
 {
     Task Insert(WasteInputModel model);
+    Task<List<WasteInputModel>> GetAllWastes();
 }

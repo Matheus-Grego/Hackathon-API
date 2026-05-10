@@ -3,7 +3,7 @@ using HackathonEquipe6.Core.Repositories;
 
 namespace HackathonEquipe6.Application.Services;
 
-public class WasteService
+public class WasteService : IWasteService
 {
     private readonly IWasteRepository _repository;
 
@@ -15,5 +15,12 @@ public class WasteService
     {
         var entity = WasteInputModel.ToEntity(model);
         await _repository.Insert(entity);
+    }
+
+    public async Task<List<WasteInputModel>> GetAllWastes()
+    {
+        var entities =  await _repository.GetAllWastes();
+        return entities.Select(x => WasteInputModel.FromEntity(x)).ToList();
+
     }
 }

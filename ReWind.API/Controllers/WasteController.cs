@@ -23,4 +23,11 @@ public class WasteController : ControllerBase
        await _service.Insert(model);
        return NoContent();
     }
+    
+    [HttpGet]
+    public async Task<IActionResult> GetAllWastes()
+    {
+        var result = await _service.GetAllWastes();
+        return Ok(result);
+    }
 }

@@ -1,3 +1,5 @@
+using HackathonEquipe6.Core.Enums;
+
 namespace HackathonEquipe6.Core.Entities;
 
 public class ParkWaste : BaseEntity
@@ -8,4 +10,5 @@ public class ParkWaste : BaseEntity
     public virtual Waste Waste { get; set; }
     public decimal Quantity { get; set; }
     public decimal PricePerTon { get; set; }
+    public ParkWasteEnum CalculationType { get; set; }
 }
