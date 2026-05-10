@@ -22,6 +22,8 @@ public class ParkDetailsViewModel
     public double Latitude { get; set; }
     public double Longitude { get; set; }
     public List<ParkWasteViewModel> ParkWastes { get; set; }
+    public CurtailmentRiskLevel? CurtailmentRiskLevel { get; set; }
+
     
     public static ParkDetailsViewModel FromEntity(Park entity)  => new()
     {
@@ -40,6 +42,8 @@ public class ParkDetailsViewModel
         Origin = entity.Origin,
         Latitude = entity.Latitude,
         Longitude = entity.Longitude,
+        CurtailmentRiskLevel = entity.CurtailmentRiskLevel,
+        
         ParkWastes = entity.ParkWaste?.Select(pw => new ParkWasteViewModel
         {
             Quantity = pw.Quantity,

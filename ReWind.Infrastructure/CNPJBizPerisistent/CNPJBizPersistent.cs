@@ -53,6 +53,12 @@ public class CNPJBizPersistent : ICNPJBizPersistance
         request.Headers.Add("Accept", "application/json");
 
         var response = await _httpClient.SendAsync(request);
+
+        if (!response.IsSuccessStatusCode)
+        {
+            return new CNPJApiViewModel();
+        }
+        
         var content = await response.Content.ReadAsStringAsync();
         
         // 🔥 MAPEAMENTO AQUI
