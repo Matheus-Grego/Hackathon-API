@@ -16,7 +16,7 @@ public class ParkRepository : IParkRepository
     
     public async Task<List<Park>> GetAllParks()
     {
-        return await _dbContext.Parks.ToListAsync();
+        return await _dbContext.Parks.AsNoTracking().ToListAsync();
     }
     public async Task<Park?> GetParkById(Guid id)
     {

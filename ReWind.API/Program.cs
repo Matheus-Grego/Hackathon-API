@@ -1,7 +1,9 @@
 using System.Text.Json.Serialization;
+using HackathonEquipe6.Application.ICNPJBizPersistance;
 using HackathonEquipe6.Application.Services;
 using HackathonEquipe6.Core.Entities;
 using HackathonEquipe6.Core.Repositories;
+using HackathonEquipe6.Infrastructure.CNPJBizPerisistent;
 using HackathonEquipe6.Infrastructure.GoogleMapsPersistent;
 using HackathonEquipe6.Infrastructure.Persistance;
 using HackathonEquipe6.Infrastructure.Repositories;
@@ -31,6 +33,8 @@ builder.Services.AddHttpClient<IGoogleMapsService, GoogleMapsService>();
 builder.Services.AddScoped<ICompanyService, CompanyService>();
 builder.Services.AddScoped<IWasteService, WasteService>();
 builder.Services.AddScoped<IParkService, ParkService>();
+
+builder.Services.AddHttpClient<ICNPJBizPersistance, CNPJBizPersistent>();
 
 
 builder.Services.AddControllers().AddJsonOptions(options =>

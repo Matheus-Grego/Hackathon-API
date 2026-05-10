@@ -11,7 +11,7 @@ public class ParkDetailsViewModel
     public string City { get; set; }
     public string State { get; set; }
     public string? ZipCode { get; set; }
-    public string? Phone { get; set; }
+    public List<TelefoneDto> Phones { get; set; }
     public string? Email { get; set; }
     public string DocumentNumber { get; set; }
     public string Owner { get; set; }
@@ -23,7 +23,7 @@ public class ParkDetailsViewModel
     public double Longitude { get; set; }
     public List<ParkWasteViewModel> ParkWastes { get; set; }
     
-    public static ParkDetailsViewModel FromEntity(Park entity) => new()
+    public static ParkDetailsViewModel FromEntity(Park entity)  => new()
     {
         Id = entity.Id,
         Name = entity.Name,
@@ -31,7 +31,6 @@ public class ParkDetailsViewModel
         City = entity.City,
         State = entity.State,
         ZipCode = entity.ZipCode,
-        Phone = entity.Phone,
         Email = entity.Email,
         DocumentNumber = entity.DocumentNumber,
         Owner = entity.Owner,
