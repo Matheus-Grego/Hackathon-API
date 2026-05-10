@@ -1,0 +1,44 @@
+﻿services:
+  rewind.api:
+    image: rewind.api
+
+    build:
+      context: .
+      dockerfile: ReWind.API/Dockerfile
+
+    container_name: rewind-api
+
+    ports:
+      - "8080:8080"
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+
+      ConnectionStrings__DefaultConnection: Host=postgres;Port=5432;Database=ReWind;Username=teste;Password=123
+
+
+      CNPJBiz__ApiKey: ${CNPJ_BIZ_KEY}
+      CNPJBiz__BaseUrl: https://cnpj.biz/api/v2
+
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:17
+
+    container_name: rewind-postgres
+
+    environment:
+      POSTGRES_DB: ReWind
+      POSTGRES_USER: teste
+      POSTGRES_PASSWORD: 123
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
