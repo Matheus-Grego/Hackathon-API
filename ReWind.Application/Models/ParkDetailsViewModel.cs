@@ -23,6 +23,8 @@ public class ParkDetailsViewModel
     public double Longitude { get; set; }
     public List<ParkWasteViewModel> ParkWastes { get; set; }
     public CurtailmentRiskLevel? CurtailmentRiskLevel { get; set; }
+    public OperationTypeEnum OperationType { get; set; }
+
 
     
     public static ParkDetailsViewModel FromEntity(Park entity)  => new()
@@ -43,6 +45,7 @@ public class ParkDetailsViewModel
         Latitude = entity.Latitude,
         Longitude = entity.Longitude,
         CurtailmentRiskLevel = entity.CurtailmentRiskLevel,
+        OperationType = entity.OperationType,
         
         ParkWastes = entity.ParkWaste?.Select(pw => new ParkWasteViewModel
         {
