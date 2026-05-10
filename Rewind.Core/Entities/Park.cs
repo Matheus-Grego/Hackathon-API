@@ -24,6 +24,7 @@ public class Park : BaseEntity
     public OperationTypeEnum?  OperationType { get; set; }
     public CurtailmentRiskLevel? CurtailmentRiskLevel { get; set; }
     public virtual List<ParkWaste> ParkWaste { get; set; }
-    
+    public decimal? TotalCO2ReductionTons { get; set; }
+
     
 }

@@ -14,6 +14,7 @@ public class ParkViewModel
     public CurtailmentRiskLevel? CurtailmentRiskLevel { get; set; }    
     public virtual List<ParkWaste> ParkWaste { get; set; }
     public OperationTypeEnum? OperationType { get; set; }
+    public decimal? TotalCO2ReductionTons { get; set; }
     
     
     public static ParkViewModel FromEntity(Park entity)
@@ -28,7 +29,8 @@ public class ParkViewModel
             Longitude = entity.Longitude,
             ParkWaste = entity.ParkWaste,
             CurtailmentRiskLevel =  entity.CurtailmentRiskLevel,
-            OperationType = entity.OperationType
+            OperationType = entity.OperationType,
+            TotalCO2ReductionTons = entity.TotalCO2ReductionTons
         };
     }
 
