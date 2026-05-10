@@ -13,7 +13,7 @@ public class ParkViewModel
     public double Longitude { get; set; }
     public CurtailmentRiskLevel? CurtailmentRiskLevel { get; set; }    
     public virtual List<ParkWaste> ParkWaste { get; set; }
-    public OperationTypeEnum OperationType { get; set; }
+    public OperationTypeEnum? OperationType { get; set; }
     
     
     public static ParkViewModel FromEntity(Park entity)

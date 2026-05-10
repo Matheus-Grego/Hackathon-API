@@ -23,7 +23,7 @@ public class ParkDetailsViewModel
     public double Longitude { get; set; }
     public List<ParkWasteViewModel> ParkWastes { get; set; }
     public CurtailmentRiskLevel? CurtailmentRiskLevel { get; set; }
-    public OperationTypeEnum OperationType { get; set; }
+    public OperationTypeEnum? OperationType { get; set; }
 
 
     
