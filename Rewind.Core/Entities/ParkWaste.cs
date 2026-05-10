@@ -11,4 +11,5 @@ public class ParkWaste : BaseEntity
     public decimal Quantity { get; set; }
     public decimal PricePerTon { get; set; }
     public ParkWasteEnum CalculationType { get; set; }
+    public decimal? CO2ReductionTons { get; set; }
 }

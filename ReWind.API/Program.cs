@@ -1,4 +1,5 @@
 using System.Text.Json.Serialization;
+using HackathonEquipe6.API.Handlers;
 using HackathonEquipe6.Application.ICNPJBizPersistance;
 using HackathonEquipe6.Application.Services;
 using HackathonEquipe6.Core.Entities;
@@ -19,6 +20,9 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddExceptionHandler<APIExceptionHandler>();
+builder.Services.AddProblemDetails();
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
@@ -55,6 +59,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseExceptionHandler();
 
 app.UseAuthorization();
 

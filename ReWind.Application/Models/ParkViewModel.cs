@@ -4,6 +4,7 @@ namespace HackathonEquipe6.Application.Models;
 
 public class ParkViewModel
 {
+    public Guid Id { get; set; }
     public string Name { get; set; }
     public string Address { get; set; }
     public string City { get; set; }
@@ -27,6 +28,7 @@ public class ParkViewModel
     {
         return new ParkViewModel
         {
+            Id = entity.Id,
             Name = entity.Name,
             Address = entity.Address,
             City = entity.City,

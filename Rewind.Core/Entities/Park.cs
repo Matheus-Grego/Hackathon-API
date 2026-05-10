@@ -21,7 +21,7 @@ public class Park : BaseEntity
     public OriginTypeEnum Origin { get; set; }
     public double Latitude { get; set; }
     public double Longitude { get; set; }
-    
+    public CurtailmentRiskLevel? CurtailmentRiskLevel { get; set; }
     public virtual List<ParkWaste> ParkWaste { get; set; }
     
 }

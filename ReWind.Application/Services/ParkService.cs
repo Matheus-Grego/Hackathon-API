@@ -32,11 +32,15 @@ public class ParkService : IParkService
     {
         var  entity = await _repository.GetParkDetails(id);
         var model = entity == null ? null : ParkDetailsViewModel.FromEntity(entity);
-        var search = await _cnpjBizPersistent.GetEmpresaByCNPJAsync(entity.Password);
-        model.Email = search.Email;
-        model.Address = search.Address;
-        model.ZipCode = search.ZipCode;
-        model.Phones = search.Telefones;
+        if (!String.IsNullOrEmpty(entity.Password))
+        {
+            var search = await _cnpjBizPersistent.GetEmpresaByCNPJAsync(entity.Password);
+            model.Email = search.Email;
+            model.Address = search.Address;
+            model.ZipCode = search.ZipCode;
+            model.Phones = search.Telefones;
+        }
+        
         
         return model;
     }

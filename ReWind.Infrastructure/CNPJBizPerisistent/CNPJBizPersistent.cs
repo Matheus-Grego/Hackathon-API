@@ -54,12 +54,7 @@ public class CNPJBizPersistent : ICNPJBizPersistance
 
         var response = await _httpClient.SendAsync(request);
         var content = await response.Content.ReadAsStringAsync();
-
-        if (!response.IsSuccessStatusCode)
-        {
-            throw new Exception($"Erro CNPJ Biz {(int)response.StatusCode}: {content}");
-        }
-
+        
         // 🔥 MAPEAMENTO AQUI
         var data = JsonSerializer.Deserialize<JsonElement>(content);
 
