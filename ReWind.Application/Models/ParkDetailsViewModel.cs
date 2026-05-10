@@ -49,6 +49,7 @@ public class ParkDetailsViewModel
             Quantity = pw.Quantity,
             PricePerTon = pw.PricePerTon,
             CalculationType = pw.CalculationType,
+            CO2ReductionTons =  pw.CO2ReductionTons,
             Waste = pw.Waste == null ? null : new WasteViewModel
             {
                 Title = pw.Waste.Title,
@@ -63,6 +64,8 @@ public class ParkWasteViewModel
     public decimal PricePerTon { get; set; }
     public ParkWasteEnum CalculationType { get; set; }
     public WasteViewModel Waste { get; set; }
+    public decimal? CO2ReductionTons { get; set; }
+
 }
 
 public class WasteViewModel
