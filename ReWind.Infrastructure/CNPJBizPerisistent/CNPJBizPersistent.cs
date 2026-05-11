@@ -61,7 +61,6 @@ public class CNPJBizPersistent : ICNPJBizPersistance
         
         var content = await response.Content.ReadAsStringAsync();
         
-        // 🔥 MAPEAMENTO AQUI
         var data = JsonSerializer.Deserialize<JsonElement>(content);
 
         var result = new CNPJApiViewModel
